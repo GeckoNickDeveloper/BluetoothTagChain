@@ -12,7 +12,6 @@ This data rappresentation is based on those 4 data types:
  - boolean
 ## Syntax
 #### Element
-TODO MIN DESC OF ELEMENT
 ```
 @identifier-name > *
 ```
@@ -56,7 +55,3 @@ ___
     ]
 ]
 ```
-ADD DESCRIPTION
-___
-## TODO
-Definire il carattere di fine elemento [al momento è '<']
