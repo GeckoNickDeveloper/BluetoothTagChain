@@ -1,32 +1,45 @@
-# Bluetooth Tag Chain (BTC)
+# BTC (Bluetooth Tag Chain)
 
 _BTC_ is born with the idea of transmit small quantity of data between two devices via [_Bluetooth_]('https://www.bluetooth.com/'). It's also inspired by [_JSON_]('https://en.wikipedia.org/wiki/JSON') but tries to be more lightweight.
 
 > It's very important  to specify that BTC supports **mixed lists**: 
 > different data types can be included to the list, including more lists
 ## Specific
-This data rappresentation is based on those 4 data types:
- - int
- - double
+This data rappresentation is based on those 3 data types:
+ - number (integers or decimals)
  - string
  - boolean
 ## Syntax
+There are few sintax rules for this type, but they are very strict:
+> Each tag must start with ``` @ ```
+> Tag name are strings that can be composed by ``` - ```
+> Tag name is case sensitive
+> A tag ends with ``` > ``` character
+___
+> Strings are rappresented with: ``` "my string" ```
+> Numbers are rappresented with a series of numbers (for example: ``` 37.49 ```)
+> Booleans are rappresented with ``` true ``` or ``` false ```
+
 #### Element
+An Element is a basic pair between a **_TAG_** and **_DATA_**
 ```
 @identifier-name > *
 ```
 Where \* can assume the following data types:
-- basic types:
-    - int
-    - double
-    - string
-    - boolean
-- complex types:
-    - object
-    - list
+- _Basic Datas_:
+    - _Numbers_
+    - _Strings_
+    - _Booleans_
+- _Complex Datas_:
+    - _Objects_
+    - _Lists_
 ___
 #### Object
-An object is a structure composed of several elements 
+An object is a structure composed of several Elements.
+**Object syntax**
+> An Object starts with ``` ( ``` and ends with ``` ) ```
+> Each item inside an Object **IS** an Element
+> 
 ```
 (
     @comp-a > 13
@@ -34,23 +47,26 @@ An object is a structure composed of several elements
     @comp-c > true
 )
 ```
-Obviously, the object can fits more than 3 elements of the example
 ___
 #### List
+Lists are compositions of Data.
+**List syntax**
+> A List starts with ``` [ ``` and ends with ``` ] ```
+> Each item in the List is separated by ``` | ``` character
+> Each item in the List **ISN'T** an Element: IS a **data**
 ```
 [
     420.69 |
     "Mixed Type List" |
     (
         @comp-a > "Wait. That's illegal."
-        @comp-b > "Do you understand the reference?"
+        @comp-b > "Ah, I see you're a developer of culture as well!"
         @comp-c > true
     ) |
-    false |
     [
-        "This bad boy can" |
-        "Fits a lot of things" |
-        "Inside itself!" |
+        "Wait. That's" |
+        "Outstanding move" |
+        "Behind science" |
         "*MEME's POWER INTESIFIES*"
     ]
 ]
