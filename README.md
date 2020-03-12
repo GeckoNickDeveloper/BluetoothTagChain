@@ -11,14 +11,14 @@ This data rappresentation is based on those 3 data types:
  - boolean
 ## Syntax
 There are few sintax rules for this type, but they are very strict:
-> Each tag must start with ``` @ ```<br>
-> Tag name are strings that can be composed by ``` - ```<br>
+> Each tag must start with `@`<br>
+> Tag name are strings that can be composed by `-`<br>
 > Tag name is case sensitive<br>
-> A tag ends with ``` > ``` character<br>
+> A tag ends with `>` character<br>
 ___
-> Strings are rappresented with: ``` "my string" ```<br>
-> Numbers are rappresented with a series of numbers (for example: ``` 37.49 ```)<br>
-> Booleans are rappresented with ``` true ``` or ``` false ```<br>
+> Strings are rappresented with: `"my string"`<br>
+> Numbers are rappresented with a series of numbers (for example: `37.49`)<br>
+> Booleans are rappresented with `true` or `false`<br>
 
 #### Element
 An Element is a basic pair between a **_TAG_** and **_DATA_**<br>
@@ -37,7 +37,7 @@ ___
 #### Object
 An object is a structure composed of several Elements.<br>
 **Object syntax**<br>
-> An Object starts with ``` ( ``` and ends with ``` ) ```<br>
+> An Object starts with `(` and ends with `)`<br>
 > Each item inside an Object **IS** an Element<br>
 ```
 (
@@ -50,8 +50,8 @@ ___
 #### List
 Lists are compositions of Data.<br>
 **List syntax**<br>
-> A List starts with ``` [ ``` and ends with ``` ] ```<br>
-> Each item in the List is separated by ``` | ``` character<br>
+> A List starts with `[` and ends with `]`<br>
+> Each item in the List is separated by `|` character<br>
 > Each item in the List **ISN'T** an Element: IS a **data**<br>
 ```
 [
