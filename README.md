@@ -2,8 +2,8 @@
 
 _BTC_ is born with the idea of transmit small quantity of data between two devices via [_Bluetooth_]('https://www.bluetooth.com/'). It's also inspired by [_JSON_]('https://en.wikipedia.org/wiki/JSON') but tries to be more lightweight.
 
-> It's very important  to specify that BTC supports **mixed lists**: 
-> different data types can be included to the list, including more lists
+> It's very important  to specify that BTC supports **mixed lists**:<br>
+> different data types can be included to the list, including more lists<br>
 ## Specific
 This data rappresentation is based on those 3 data types:
  - number (integers or decimals)
@@ -11,17 +11,17 @@ This data rappresentation is based on those 3 data types:
  - boolean
 ## Syntax
 There are few sintax rules for this type, but they are very strict:
-> Each tag must start with ``` @ ```
-> Tag name are strings that can be composed by ``` - ```
-> Tag name is case sensitive
-> A tag ends with ``` > ``` character
+> Each tag must start with ``` @ ```<br>
+> Tag name are strings that can be composed by ``` - ```<br>
+> Tag name is case sensitive<br>
+> A tag ends with ``` > ``` character<br>
 ___
-> Strings are rappresented with: ``` "my string" ```
-> Numbers are rappresented with a series of numbers (for example: ``` 37.49 ```)
-> Booleans are rappresented with ``` true ``` or ``` false ```
+> Strings are rappresented with: ``` "my string" ```<br>
+> Numbers are rappresented with a series of numbers (for example: ``` 37.49 ```)<br>
+> Booleans are rappresented with ``` true ``` or ``` false ```<br>
 
 #### Element
-An Element is a basic pair between a **_TAG_** and **_DATA_**
+An Element is a basic pair between a **_TAG_** and **_DATA_**<br>
 ```
 @identifier-name > *
 ```
@@ -35,11 +35,10 @@ Where \* can assume the following data types:
     - _Lists_
 ___
 #### Object
-An object is a structure composed of several Elements.
-**Object syntax**
-> An Object starts with ``` ( ``` and ends with ``` ) ```
-> Each item inside an Object **IS** an Element
-> 
+An object is a structure composed of several Elements.<br>
+**Object syntax**<br>
+> An Object starts with ``` ( ``` and ends with ``` ) ```<br>
+> Each item inside an Object **IS** an Element<br>
 ```
 (
     @comp-a > 13
