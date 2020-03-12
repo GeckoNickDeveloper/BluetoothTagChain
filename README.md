@@ -49,11 +49,11 @@ An object is a structure composed of several Elements.
 ```
 ___
 #### List
-Lists are compositions of Data.
-**List syntax**
-> A List starts with ``` [ ``` and ends with ``` ] ```
-> Each item in the List is separated by ``` | ``` character
-> Each item in the List **ISN'T** an Element: IS a **data**
+Lists are compositions of Data.<br>
+**List syntax**<br>
+> A List starts with ``` [ ``` and ends with ``` ] ```<br>
+> Each item in the List is separated by ``` | ``` character<br>
+> Each item in the List **ISN'T** an Element: IS a **data**<br>
 ```
 [
     420.69 |
