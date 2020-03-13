@@ -1,6 +1,6 @@
 # BTC (Bluetooth Tag Chain)
 
-_BTC_ is born with the idea of transmit small quantity of data between two devices via [_Bluetooth_]('https://www.bluetooth.com/'). It's also inspired by [_JSON_]('https://en.wikipedia.org/wiki/JSON') but tries to be more lightweight.
+BTC is born with the idea of transmit small quantity of data between two devices via [Bluetooth]('https://www.bluetooth.com/'). It's also inspired by [JSON]('https://en.wikipedia.org/wiki/JSON') but tries to be more lightweight.
 
 > It's very important  to specify that BTC supports **mixed lists**:<br>
 > different data types can be included to the list, including more lists<br>
