@@ -1,24 +1,35 @@
 # BTC (Bluetooth Tag Chain)
 
 BTC is born with the idea of transmit small quantity of data between two devices via [Bluetooth]('https://www.bluetooth.com/'). It's also inspired by [JSON]('https://en.wikipedia.org/wiki/JSON') but tries to be more lightweight.
+The main drowback of BTC is that strings value are very limited in order to communicate the minimum sensitive informations.
 
 > It's very important  to specify that BTC supports **mixed lists**:<br>
 > different data types can be included to the list, including more lists<br>
 ## Specific
 This data rappresentation is based on those 3 data types:
- - number (integers or decimals)
- - string
- - boolean
+ - numbers
+ - strings
+ - booleans
 ## Syntax
-There are few sintax rules for this type, but they are very strict:
+There are few sintax rules, but they are very strict:
 > Each tag must start with `@`<br>
 > Tag name are strings that can be composed by `-`<br>
 > Tag name is case sensitive<br>
 > A tag ends with `>` character<br>
 ___
-> Strings are rappresented with: `"my string"`<br>
-> Numbers are rappresented with a series of numbers (for example: `37.49`)<br>
-> Booleans are rappresented with `true` or `false`<br>
+**Strings**<br>
+Strings are rappresented with: `"my string"`<br>
+There are some limitations:
+> Every special character that requires a backslash to be rappresented is not allowed<br>
+> for example: `\n`, `\t`, `\"`, ecc...
+
+**Numbers**<br>
+Numbers are rappresented with a series of numbers (for example: `37.49`)<br>
+**Booleans**<br>
+Booleans are rappresented with `true` or `false`<br>
+___
+> Objects can't be empty
+> List can't be empty
 
 #### Element
 An Element is a basic pair between a **_TAG_** and **_DATA_**<br>
@@ -51,21 +62,21 @@ ___
 Lists are compositions of Data.<br>
 **List syntax**<br>
 > A List starts with `[` and ends with `]`<br>
-> Each item in the List is separated by `|` character<br>
-> Each item in the List **ISN'T** an Element: IS a **data**<br>
+> Each item in the List is separated by `,` character<br>
+> Each item in the List **ISN'T** an Element: IS a **DATA**<br>
 ```
 [
-    420.69 |
-    "Mixed Type List" |
+    420.69,
+    "Mixed Type List",
     (
         @comp-a > "Wait. That's illegal."
         @comp-b > "Ah, I see you're a developer of culture as well!"
         @comp-c > true
-    ) |
+    ),
     [
-        "Wait. That's" |
-        "Outstanding move" |
-        "Behind science" |
+        "Wait. That's",
+        "Outstanding move",
+        "Behind science",
         "*MEME's POWER INTESIFIES*"
     ]
 ]
