@@ -1,15 +1,14 @@
 # BTC (Bluetooth Tag Chain)
 
 BTC is born with the idea of transmit small quantity of data between two devices via [Bluetooth]('https://www.bluetooth.com/'). It's also inspired by [JSON]('https://en.wikipedia.org/wiki/JSON') but tries to be more lightweight.
-The main drowback of BTC is that strings value are very limited in order to communicate the minimum sensitive informations.
 
 > It's very important  to specify that BTC supports **mixed lists**:<br>
 > different data types can be included to the list, including more lists<br>
 ## Specific
 This data rappresentation is based on those 3 data types:
- - numbers
- - strings
- - booleans
+ - Numbers
+ - Strings
+ - Booleans
 ## Syntax
 There are few sintax rules, but they are very strict:
 > Each tag must start with `@`<br>
@@ -38,7 +37,7 @@ An Element is a basic pair between a **_TAG_** and **_DATA_**<br>
 ```
 Where \* can assume the following data types:
 - _Basic Datas_:
-    - _Numbers_
+    - _Numbers (Decimals and Integers)_
     - _Strings_
     - _Booleans_
 - _Complex Datas_:
