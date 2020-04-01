@@ -3,33 +3,46 @@
 BTC is born with the idea of transmit small quantity of data between two devices via [Bluetooth]('https://www.bluetooth.com/'). It's also inspired by [JSON]('https://en.wikipedia.org/wiki/JSON') but tries to be more lightweight.
 
 > It's very important  to specify that BTC supports **mixed lists**:<br>
-> different data types can be included to the list, including more lists<br>
+> different data types can be included to the list, including more lists.<br>
 ## Specific
 This data rappresentation is based on those 3 data types:
  - Numbers
  - Strings
  - Booleans
 ## Syntax
-There are few sintax rules, but they are very strict:
-> Each tag must start with `@`<br>
-> Tag name are strings that can be composed by `-`<br>
-> Tag name is case sensitive<br>
-> A tag ends with `>` character<br>
+There are few sintax rules, but they are very strict:<br>
+___
+**Elements**<br>
+An ELEMENT is a child of Object. It is composed by TAG and VALUE
+> Each element must start with `@`<br>
+> TAGs are strings that can be composed by `-`<br>
+> TAG is case sensitive<br>
+> A TAG ends with `>` character<br>
+___
+**Items**<br>
+An ITEM is a child of List. It is a pure VALUE.
+> An item must ends with `,` character if it isn't the last in  the list.<br>
 ___
 **Strings**<br>
 Strings are rappresented with: `"my string"`<br>
 There are some limitations:
-> Every special character that requires a backslash to be rappresented is not allowed<br>
-> for example: `\n`, `\t`, `\"`, ecc...
-
+> Only UTF-8 characters can be used<br>
+> The only special characters that can be rappresented are:<br>
+    - `\r`<br>
+    - `\n`<br>
+    - `\t`<br>
+    - `\'`<br>
+    - `\"`<br> 
+    - `\\`<br>
+___
 **Numbers**<br>
 Numbers are rappresented with a series of numbers (for example: `37.49`)<br>
+___
 **Booleans**<br>
 Booleans are rappresented with `true` or `false`<br>
 ___
-> Objects can't be empty
-> List can't be empty
-
+**Complex types**<br>
+Both complex types (List and Object) can be empty. 
 #### Element
 An Element is a basic pair between a **_TAG_** and **_DATA_**<br>
 ```
